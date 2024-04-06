@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>CSS3响应式瀑布流图片展示DEMO演示</title>
+
+<link rel="stylesheet" href="css/waterfall.css">
+<!-- 不兼容IE10以下浏览器 -->
+<style>
+   body {
+       margin: 0; /* 去除页面默认的外边距 */
+       background-color: black; /* 背景颜色改为黑色 */
+   }
+   canvas {
+       position: fixed; /* 将 canvas 元素固定在页面上 */
+       top: 0;
+       left: 0;
+       z-index: -1; /* 将 canvas 元素的 z-index 设置为 -1，使其处于其他内容的后方 */
+   }
+   h1 {
+      background: linear-gradient(to right, pink, #ff1493); /* 使用线性渐变背景 */
+      -webkit-background-clip: text; /* 设置背景剪切，使文字颜色为背景渐变色 */
+      -webkit-text-fill-color: transparent;
+  }
+</style>
+
+</head>
+<body>
+
+<h1>纯CSS3实现倾角瀑布流，带滤镜特效</h1>
+
+<div style="text-align:center;clear:both;margin-bottom:50px;">
+</div>
+
+<div id="waterfall">
+<span><img src="./imgs/1.jpg"></span>
+<span><img src="./imgs/2.jpg"></span>
+<span><img src="./imgs/3.jpg"></span>
+<span><img src="./imgs/4.jpg"></span>
+<span><img src="./imgs/5.jpg"></span>
+<span><img src="./imgs/6.jpg"></span>
+<span><img src="./imgs/7.jpg"></span>
+<span><img src="./imgs/8.jpg"></span>
+<span><img src="./imgs/9.jpg"></span>
+<span><img src="./imgs/10.jpg"></span>
+<span><img src="./imgs/11.jpg"></span>
+<span><img src="./imgs/12.jpg"></span>
+<span><img src="./imgs/13.jpg"></span>
+<span><img src="./imgs/14.jpg"></span>
+<span><img src="./imgs/15.jpg"></span>
+<span><img src="./imgs/16.jpg"></span>
+<span><img src="./imgs/17.jpg"></span>
+<span><img src="./imgs/18.jpg"></span>
+<span><img src="./imgs/19.jpg"></span>
+<span><img src="./imgs/20.jpg"></span>
+<span><img src="./imgs/21.jpg"></span>
+<span><img src="./imgs/22.jpg"></span>
+<span><img src="./imgs/23.jpg"></span>
+<span><img src="./imgs/24.jpg"></span>
+<span><img src="./imgs/25.jpg"></span>
+<span><img src="./imgs/26.jpg"></span>
+<span><img src="./imgs/27.jpg"></span>
+<span><img src="./imgs/28.jpg"></span>
+<span><img src="./imgs/29.jpg"></span>
+<span><img src="./imgs/30.jpg"></span>
+<span><img src="./imgs/31.jpg"></span>
+<span><img src="./imgs/32.jpg"></span>
+<span><img src="./imgs/33.jpg"></span>
+<span><img src="./imgs/34.jpg"></span>
+<span><img src="./imgs/35.jpg"></span>
+<span><img src="./imgs/36.jpg"></span>
+<span><img src="./imgs/37.jpg"></span>
+<span><img src="./imgs/38.jpg"></span>
+<span><img src="./imgs/39.jpg"></span>
+<span><img src="./imgs/40.jpg"></span>
+<span><img src="./imgs/41.jpg"></span>
+<span><img src="./imgs/42.jpg"></span>
+<span><img src="./imgs/43.jpg"></span>
+<span><img src="./imgs/44.jpg"></span>
+<span><img src="./imgs/45.jpg"></span>
+<span><img src="./imgs/46.jpg"></span>
+<span><img src="./imgs/47.jpg"></span>
+<span><img src="./imgs/48.jpg"></span>
+<span><img src="./imgs/49.jpg"></span>
+<span><img src="./imgs/50.jpg"></span>
+<span><img src="./imgs/51.jpg"></span>
+<span><img src="./imgs/52.jpg"></span>
+<span><img src="./imgs/53.jpg"></span>
+<span><img src="./imgs/54.jpg"></span>
+<span><img src="./imgs/55.jpg"></span>
+<span><img src="./imgs/56.jpg"></span>
+<span><img src="./imgs/57.jpg"></span>
+<span><img src="./imgs/58.jpg"></span>
+<span><img src="./imgs/59.jpg"></span>
+<span><img src="./imgs/60.jpg"></span>
+<span><img src="./imgs/61.jpg"></span>
+<span><img src="./imgs/62.jpg"></span>
+<span><img src="./imgs/63.jpg"></span>
+<span><img src="./imgs/64.jpg"></span>
+<span><img src="./imgs/65.jpg"></span>
+<span><img src="./imgs/66.jpg"></span>
+<span><img src="./imgs/67.jpg"></span>
+<span><img src="./imgs/68.jpg"></span>
+<span><img src="./imgs/69.jpg"></span>
+<span><img src="./imgs/70.jpg"></span>
+<span><img src="./imgs/71.jpg"></span>
+<span><img src="./imgs/72.jpg"></span>
+<span><img src="./imgs/73.jpg"></span>
+<span><img src="./imgs/74.jpg"></span>
+<span><img src="./imgs/75.jpg"></span>
+<span><img src="./imgs/76.jpg"></span>
+<span><img src="./imgs/77.jpg"></span>
+<span><img src="./imgs/78.jpg"></span>
+<span><img src="./imgs/79.jpg"></span>
+<span><img src="./imgs/80.jpg"></span>
+<span><img src="./imgs/81.jpg"></span>
+<span><img src="./imgs/82.jpg"></span>
+<span><img src="./imgs/83.jpg"></span>
+<span><img src="./imgs/84.jpg"></span>
+<span><img src="./imgs/85.jpg"></span>
+<span><img src="./imgs/86.jpg"></span>
+<span><img src="./imgs/87.jpg"></span>
+<span><img src="./imgs/88.jpg"></span>
+<span><img src="./imgs/89.jpg"></span>
+<span><img src="./imgs/90.jpg"></span>
+<span><img src="./imgs/91.jpg"></span>
+<span><img src="./imgs/92.jpg"></span>
+<span><img src="./imgs/93.jpg"></span>
+<span><img src="./imgs/94.jpg"></span>
+<span><img src="./imgs/95.jpg"></span>
+<span><img src="./imgs/96.jpg"></span>
+<span><img src="./imgs/97.jpg"></span>
+<span><img src="./imgs/98.jpg"></span>
+<span><img src="./imgs/99.jpg"></span>
+<span><img src="./imgs/100.jpg"></span>
+<span><img src="./imgs/101.jpg"></span>
+<span><img src="./imgs/102.jpg"></span>
+<span><img src="./imgs/103.jpg"></span>
+<span><img src="./imgs/104.jpg"></span>
+<span><img src="./imgs/105.jpg"></span>
+<span><img src="./imgs/106.jpg"></span>
+<span><img src="./imgs/107.jpg"></span>
+<span><img src="./imgs/108.jpg"></span>
+<span><img src="./imgs/109.jpg"></span>
+<span><img src="./imgs/110.jpg"></span>
+<span><img src="./imgs/111.jpg"></span>
+<span><img src="./imgs/112.jpg"></span>
+<span><img src="./imgs/113.jpg"></span>
+<span><img src="./imgs/114.jpg"></span>
+<span><img src="./imgs/115.jpg"></span>
+<span><img src="./imgs/116.jpg"></span>
+<span><img src="./imgs/117.jpg"></span>
+<span><img src="./imgs/118.jpg"></span>
+<span><img src="./imgs/119.jpg"></span>
+<span><img src="./imgs/120.jpg"></span>
+<span><img src="./imgs/121.jpg"></span>
+<span><img src="./imgs/122.jpg"></span>
+<span><img src="./imgs/123.jpg"></span>
+<span><img src="./imgs/124.jpg"></span>
+<span><img src="./imgs/125.jpg"></span>
+<span><img src="./imgs/126.jpg"></span>
+<span><img src="./imgs/127.jpg"></span>
+<span><img src="./imgs/128.jpg"></span>
+<span><img src="./imgs/129.jpg"></span>
+<span><img src="./imgs/130.jpg"></span>
+<span><img src="./imgs/131.jpg"></span>
+<span><img src="./imgs/132.jpg"></span>
+<span><img src="./imgs/133.jpg"></span>
+<span><img src="./imgs/134.jpg"></span>
+<span><img src="./imgs/135.jpg"></span>
+<span><img src="./imgs/136.jpg"></span>
+<span><img src="./imgs/137.jpg"></span>
+<span><img src="./imgs/138.jpg"></span>
+<span><img src="./imgs/139.jpg"></span>
+<span><img src="./imgs/140.jpg"></span>
+<span><img src="./imgs/141.jpg"></span>
+<span><img src="./imgs/142.jpg"></span>
+<span><img src="./imgs/143.jpg"></span>
+<span><img src="./imgs/144.jpg"></span>
+<span><img src="./imgs/145.jpg"></span>
+<span><img src="./imgs/146.jpg"></span>
+<span><img src="./imgs/147.jpg"></span>
+<span><img src="./imgs/148.jpg"></span>
+<span><img src="./imgs/149.jpg"></span>
+<span><img src="./imgs/150.png"></span>
+<span><img src="./imgs/151.jpg"></span>
+<span><img src="./imgs/152.jpg"></span>
+<span><img src="./imgs/153.jpg"></span>
+</div>
+
+<!-- 添加音乐 -->
+<audio autoplay loop id="vd">
+   <source src="./mp3/1.mp3" type="audio/mpeg" autoplay="autoplay">
+   Your browser does not support the audio element.
+</audio>
+
+<!-- Canvas 绘制玫瑰花瓣飘落效果 -->
+<canvas id="roseCanvas"></canvas>
+
+<script>
+    // 获取 Canvas 元素
+    var canvas = document.getElementById('roseCanvas');
+    var ctx = canvas.getContext('2d');
+
+    // 设置 Canvas 大小为窗口大小
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // 定义玫瑰花瓣的绘制函数
+    function drawRosePetal(x, y, size, rotation) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rotation * Math.PI / 180);
+        ctx.translate(-x, -y);
+
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.quadraticCurveTo(x + 20 * size, y - 20 * size, x, y - 40 * size);
+        ctx.quadraticCurveTo(x - 20 * size, y - 20 * size, x, y);
+        ctx.closePath();
+
+        var gradient = ctx.createLinearGradient(x - 20 * size, y - 40 * size, x + 20 * size, y);
+        gradient.addColorStop(0, 'rgba(255, 0, 0, 0.8)');
+        gradient.addColorStop(1, 'rgba(255, 100, 100, 0.5)');
+
+        ctx.fillStyle = gradient;
+        ctx.fill();
+        ctx.restore();
+    }
+
+    // 存储花瓣的信息
+    var petals = [];
+
+    // 初始化花瓣
+    function initPetals() {
+        for (var i = 0; i < 100; i++) {
+            var x = Math.random() * canvas.width;
+            var y = Math.random() * canvas.height;
+            var size = Math.random() * 2 + 1; // 花瓣大小范围在 1 到 3 之间
+            var rotation = Math.random() * 360; // 随机旋转角度
+            var speed = Math.random() * 2 + 0.5; // 花瓣下落速度范围在 0.5 到 2 之间
+            petals.push({x: x, y: y, size: size, rotation: rotation, speed: speed});
+        }
+    }
+
+    // 更新花瓣的位置
+    function updatePetals() {
+        for (var i = 0; i < petals.length; i++) {
+            var petal = petals[i];
+            petal.y += petal.speed;
+            // 如果花瓣超出屏幕，则重新设置其位置
+            if (petal.y > canvas.height) {
+                petal.x = Math.random() * canvas.width;
+                petal.y = -30; // 从屏幕顶部开始
+            }
+        }
+    }
+
+    // 绘制花瓣
+    function drawPetals() {
+        for (var i = 0; i < petals.length; i++) {
+            var petal = petals[i];
+            drawRosePetal(petal.x, petal.y, petal.size, petal.rotation);
+        }
+    }
+
+    // 绘制玫瑰花
+    function drawRose() {
+        drawPetals();
+        updatePetals();
+    }
+
+    // 初始化花瓣
+    initPetals();
+
+    // 控制花瓣飘落效果
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawRose();
+        requestAnimationFrame(animate);
+    }
+
+    animate(); // 启动动画循环
+
+    // 定义变量存储页面滚动前的位置
+    var lastScrollY = window.scrollY;
+    var ticking = false; // 是否正在处理滚动事件的标志
+
+    // 监听页面滚动事件
+    window.addEventListener('scroll', function() {
+        lastScrollY = window.scrollY;
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                for (var i = 0; i < petals.length; i++) {
+                    petals[i].y += window.scrollY - lastScrollY;
+                }
+                lastScrollY = window.scrollY;
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+</script>
+
+
+
+
+</body>
+</html>
